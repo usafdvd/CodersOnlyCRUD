@@ -8,25 +8,22 @@
 <title>Meet Your Future Dependency Here!</title>
 </head>
 <body>
-<c:choose>
-		<c:when test="${! empty profile}">
+<%-- <c:choose>
+		<c:when test="${! empty profiles}"> --%>
 <div>
-Name: ${profile.name} <br>
-Likes: ${profile.like1}, ${profile.like2}, and ${profile.like3} <br>
-Favorite animal: ${profile.animal} <br>
-Astrological sign: ${profile.sign} <br>
-Favorite quote: ${profile.quote}
+<c:forEach var="profile" items="${profiles}">
+		<c:if test="${! empty(profile)}">
+            Name: ${profile.name} <br>
+			Likes: ${profile.like1}, ${profile.like2}, and ${profile.like3} <br>
+			Favorite animal: ${profile.animal} <br>
+			Astrological sign: ${profile.sign} <br>
+			Favorite quote: ${profile.quote}<br><br>
+			</c:if>
+	</c:forEach>
 </div>
-</c:when>
-<c:otherwise>
-	<p>No matching profiles found</p>
-	</c:otherwise>
-	</c:choose>
 
 <br>
-<form action="EditProfileData.do" method="GET">
-
-</form>
+<form action="EditProfileData.do" method="GET"></form>
 <!-- Button below for searching by name -->
 <br>
 <form action="GetProfileData.do" method="GET">
@@ -51,6 +48,7 @@ Search by Animal: <input type="text" name="animal" /><input type="submit" value=
   <option value="capricorn">Capricorn</option>
 </select> <input type="submit">
 </form>
+<form action="index.html"><input type="submit" value="Home"/></form>
 
 </body>
 </html>

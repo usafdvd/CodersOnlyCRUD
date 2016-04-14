@@ -29,7 +29,8 @@ public class CodeController {
 	public ModelAndView getBySign(@RequestParam("sign") String s) {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("listProfiles.jsp");
-		mv.addObject("profile", bioDAO.getProfileBySign(s));
+		mv.addObject("profiles", bioDAO.getProfileBySign(s));
+			
 		return mv;
 	}
 	
@@ -39,7 +40,7 @@ public class CodeController {
 	public ModelAndView getByAnimal(@RequestParam("animal") String a) {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("listProfiles.jsp");
-		mv.addObject("profile", bioDAO.getProfileByAnimal(a));
+		mv.addObject("profiles", bioDAO.getProfileByAnimal(a));
 		return mv;
 	}
 	
@@ -50,7 +51,7 @@ public class CodeController {
 		System.out.println("Inside getByName");
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("listProfiles.jsp");
-		mv.addObject("profile", bioDAO.getProfileByName(n));
+		mv.addObject("profiles", bioDAO.getProfileByName(n));
 		return mv;
 	}
 	
@@ -76,6 +77,7 @@ public class CodeController {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("listAllProfiles.jsp");
 		mv.addObject("profiles", bioDAO.getAllBios());
+		System.out.println("inside getAllBios");
 		return mv;
 	}
 

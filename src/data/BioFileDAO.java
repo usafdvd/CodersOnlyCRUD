@@ -45,39 +45,42 @@ public class BioFileDAO implements BioDAO {
 	}
 	
 	@Override
-	public Bio getProfileByName(String name) {
+	public ArrayList<Bio> getProfileByName(String name) {
+		ArrayList<Bio> nameArray = new ArrayList<Bio>();
 		Bio x = null;
 		for (Bio bio: bios) {
 			if (bio.getName().equalsIgnoreCase(name)) {
 				x = bio;
-				break;
+				nameArray.add(x);
 			}
 		}
-		return x;
+		return nameArray;
 	}
 	
 	@Override
-	public Bio getProfileByAnimal(String animal) {
+	public ArrayList<Bio> getProfileByAnimal(String animal) {
+		ArrayList<Bio> animalArray = new ArrayList<Bio>();
 		Bio x = null;
 		for (Bio bio: bios) {
 			if (bio.getAnimal().equalsIgnoreCase(animal)) {
 				x = bio;
-				break;
+				animalArray.add(x);
 			}
 		}
-		return x;
+		return animalArray;
 	}
 	
 	@Override
-	public Bio getProfileBySign(String sign) {
+	public ArrayList<Bio> getProfileBySign(String sign) {
+		ArrayList<Bio> signArray = new ArrayList<Bio>();
 		Bio x = null;
 		for (Bio bio: bios) {
 			if (bio.getSign().equalsIgnoreCase(sign)) {
 				x = bio;
-				break;
+				signArray.add(x);
 			}
 		}
-		return x;
+		return signArray;
 	}
 
 	@Override

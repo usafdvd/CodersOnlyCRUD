@@ -1,3 +1,26 @@
-    name     like1           like2            like3              animal sign         quote
-1& David& riding scooters& eating chips& long walks in the dark& bear& libra& if (cute) { sayHi(); } else { bye();}
-2& Sarah& running away from strangers& reading over someone's shoulder& drinking diet water& tiger& aquarius& switch(hotNum) 1: nope(); 10: heckYeah();
+    name           like1           like2            like3              animal sign         quote
+1& David Avila& riding scooters& eating chips& long walks in the dark& bear& libra& if (cute) { sayHi(); } else { bye();}
+2& Sarah Lobser& running away from strangers& reading over someone's shoulder& drinking diet water& tiger& aquarius& switch(hotNum) 1: nope(); 10: heckYeah();
+3& Alex Flenderson& climbing trees& sitting in my annex& eating pickles& wolf& leo& I like big ints and I cannot lie, you other coders can't deny!
+4& Chad Chadington& typing short sentences& cleaning my car out& making my code nice and tight& bear& taurus& throws TooHotForYouException();
+5& Colin Tucker& riding scooters& eating chips& long walks in the dark& bear& pisces& if (cute) { sayHi(); } else { bye();}
+6& Rich Froning& running away from strangers& reading over someone's shoulder& drinking diet water& tiger& sagittarius& switch(hotNum) 1: nope(); 10: heckYeah();
+7& Tim Brunk& climbing trees& sitting in my annex& eating pickles& wolf& virgo& I like big ints and I cannot lie, you other coders can't deny!
+8& Angel Rivera& typing short sentences& cleaning my car out& making my code nice and tight& bear& capricorn& throws TooHotForYouException();
+9& Brenton Gimuccio& riding scooters& eating chips& long walks in the dark& bear& leo& if (cute) { sayHi(); } else { bye();}
+10& Wes Ross& running away from strangers& reading over someone's shoulder& drinking diet water& tiger& cancer& switch(hotNum) 1: nope(); 10: heckYeah();
+11& Bruno Trillo& climbing trees& sitting in my annex& eating pickles& wolf& aries& I like big ints and I cannot lie, you other coders can't deny!
+12& Kaylee Mchugh& typing short sentences& cleaning my car out& making my code nice and tight& bear& scorpio& throws TooHotForYouException();
+13& Chris Rioux& riding scooters& eating chips& long walks in the dark& bear& leo& if (cute) { sayHi(); } else { bye();}
+14& Katie Max& running away from strangers& reading over someone's shoulder& drinking diet water& tiger& virgo& switch(hotNum) 1: nope(); 10: heckYeah();
+15& Ryan Arnold& climbing trees& sitting in my annex& eating pickles& wolf& aquarius& I like big ints and I cannot lie, you other coders can't deny!
+16& Chuck Norris& typing short sentences& cleaning my car out& making my code nice and tight& bear& libra& throws TooHotForYouException();
+17& Adam Lambert& riding scooters& eating chips& long walks in the dark& bear& capricorn& if (cute) { sayHi(); } else { bye();}
+18& Michael Wick& running away from strangers& reading over someone's shoulder& drinking diet water& tiger& scorpio& switch(hotNum) 1: nope(); 10: heckYeah();
+19& Glynn Herndon& climbing trees& sitting in my annex& eating pickles& wolf& pisces& I like big ints and I cannot lie, you other coders can't deny!
+20& Jamie Ross& typing short sentences& cleaning my car out& making my code nice and tight& bear& cancer& throws TooHotForYouException();
+21& Kyle Smith& riding scooters& eating chips& long walks in the dark& bear& taurus& if (cute) { sayHi(); } else { bye();}
+22& Stephan Ortiz& running away from strangers& reading over someone's shoulder& drinking diet water& tiger& virgo& switch(hotNum) 1: nope(); 10: heckYeah();
+23& Emily Vue& climbing trees& sitting in my annex& eating pickles& wolf& sagittarius& I like big ints and I cannot lie, you other coders can't deny!
+24& Kevin Hart& typing short sentences& cleaning my car out& making my code nice and tight& bear& leo& throws TooHotForYouException();
+25& Bruce Glee& riding scooters& eating chips& long walks in the dark& bear& virgo& if (cute) { sayHi(); } else { bye();}
