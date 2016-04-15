@@ -8,7 +8,9 @@ public interface BioDAO {
 	public ArrayList<Bio> getProfileByAnimal(String animal);
 	public ArrayList<Bio> getProfileBySign(String sign);
 	public void addBio(Bio bio);
-	public void editBio(Bio bio);
-
+//	public void editBio(Bio bio);
+	Bio editProfileById(String id);
 	List<Bio> getAllBios();
+	public List<Bio> updateProfileById(Bio bio);
+	public List<Bio> deleteProfile(Bio bio);
 }

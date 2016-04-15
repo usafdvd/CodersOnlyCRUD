@@ -1,8 +1,7 @@
 package data;
 
 public class Bio {
-
-
+	private String id;
 	private String name;
 	private String like1;
 	private String like2;
@@ -14,7 +13,8 @@ public class Bio {
 	public Bio() {
 	}
 
-	public Bio(String name, String like1, String like2, String like3, String animal, String sign, String quote) {
+	public Bio(String id, String name, String like1, String like2, String like3, String animal, String sign, String quote) {
+		this.id = id;
 		this.name = name;
 		this.like1 = like1;
 		this.like2 = like2;
@@ -24,7 +24,10 @@ public class Bio {
 		this.quote = quote;
 
 	}
-
+	public String getId() {
+		return id;
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -49,6 +52,10 @@ public class Bio {
 
 	public String getQuote() {
 		return quote;
+	}
+	
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public void setName(String name) {

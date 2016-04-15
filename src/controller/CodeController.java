@@ -17,36 +17,30 @@ import data.BioDAO;
 public class CodeController {
 	@Autowired
 	private BioDAO bioDAO;
-	
+
 	@ModelAttribute("current")
 	public Integer initSessionObject() {
 		return 1;
 	}
-	
-	@RequestMapping(path="GetProfileData.do", 
-			params="sign",
-			method=RequestMethod.GET)
+
+	@RequestMapping(path = "GetProfileData.do", params = "sign", method = RequestMethod.GET)
 	public ModelAndView getBySign(@RequestParam("sign") String s) {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("listProfiles.jsp");
 		mv.addObject("profiles", bioDAO.getProfileBySign(s));
-			
+
 		return mv;
 	}
-	
-	@RequestMapping(path="GetProfileData.do", 
-			params="animal",
-			method=RequestMethod.GET)
+
+	@RequestMapping(path = "GetProfileData.do", params = "animal", method = RequestMethod.GET)
 	public ModelAndView getByAnimal(@RequestParam("animal") String a) {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("listProfiles.jsp");
 		mv.addObject("profiles", bioDAO.getProfileByAnimal(a));
 		return mv;
 	}
-	
-	@RequestMapping(path="GetProfileData.do", 
-			params="name",
-			method=RequestMethod.GET)
+
+	@RequestMapping(path = "GetProfileData.do", params = "name", method = RequestMethod.GET)
 	public ModelAndView getByName(@RequestParam("name") String n) {
 		System.out.println("Inside getByName");
 		ModelAndView mv = new ModelAndView();
@@ -54,7 +48,7 @@ public class CodeController {
 		mv.addObject("profiles", bioDAO.getProfileByName(n));
 		return mv;
 	}
-	
+
 	@RequestMapping(path = "CreateBio.do", method = RequestMethod.POST)
 	public ModelAndView newBio(Bio bio) {
 		bioDAO.addBio(bio);
@@ -62,15 +56,34 @@ public class CodeController {
 		mv.setViewName("listProfiles.jsp");
 		return mv;
 	}
-	
-	@RequestMapping(path = "EditBio.do", method = RequestMethod.POST)
+
+	@RequestMapping(path = "EditBio.do")
 	public ModelAndView editBio(Bio bio) {
-		bioDAO.editBio(bio);
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("listProfiles.jsp");
+		mv.setViewName("editProfile.jsp");
+		mv.addObject("profile", bioDAO.editProfileById(bio.getId()));
+		System.out.println(bio);
 		return mv;
 	}
-	
+
+	@RequestMapping(path = "DeleteBio.do")
+	public ModelAndView deleteBio(Bio bio) {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("listAllProfiles.jsp");
+		mv.addObject("profiles", bioDAO.deleteProfile(bio));
+		System.out.println(bio);
+		return mv;
+	}
+
+	@RequestMapping(path = "UpdateBio.do")
+	public ModelAndView updateBio(Bio bio) {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("listAllProfiles.jsp");
+		mv.addObject("profiles", bioDAO.updateProfileById(bio));
+		System.out.println(bio);
+		return mv;
+	}
+
 	@RequestMapping(path = "getAllBios.do", method = RequestMethod.GET)
 	public ModelAndView getAllBios() {
 		bioDAO.getAllBios();
