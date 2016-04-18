@@ -22,7 +22,7 @@ public class CodeController {
 	public Integer initSessionObject() {
 		return 1;
 	}
-
+	// Search by astrological sign 
 	@RequestMapping(path = "GetProfileData.do", params = "sign", method = RequestMethod.GET)
 	public ModelAndView getBySign(@RequestParam("sign") String s) {
 		ModelAndView mv = new ModelAndView();
@@ -31,7 +31,7 @@ public class CodeController {
 
 		return mv;
 	}
-
+	// Search by animal
 	@RequestMapping(path = "GetProfileData.do", params = "animal", method = RequestMethod.GET)
 	public ModelAndView getByAnimal(@RequestParam("animal") String a) {
 		ModelAndView mv = new ModelAndView();
@@ -39,7 +39,7 @@ public class CodeController {
 		mv.addObject("profiles", bioDAO.getProfileByAnimal(a));
 		return mv;
 	}
-
+	// Search by name
 	@RequestMapping(path = "GetProfileData.do", params = "name", method = RequestMethod.GET)
 	public ModelAndView getByName(@RequestParam("name") String n) {
 		System.out.println("Inside getByName");
@@ -48,12 +48,12 @@ public class CodeController {
 		mv.addObject("profiles", bioDAO.getProfileByName(n));
 		return mv;
 	}
-
-	@RequestMapping(path = "CreateBio.do", method = RequestMethod.POST)
+	
+	@RequestMapping(path = "CreateBio.do", method = RequestMethod.GET)
 	public ModelAndView newBio(Bio bio) {
 		bioDAO.addBio(bio);
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("listProfiles.jsp");
+		mv.setViewName("listAllProfiles.jsp");
 		return mv;
 	}
 

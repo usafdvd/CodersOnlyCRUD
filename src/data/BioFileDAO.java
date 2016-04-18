@@ -33,8 +33,9 @@ public class BioFileDAO implements BioDAO {
 				String animal = tokens[5];
 				String sign = tokens[6];
 				String quote = tokens[7];
+				String image = tokens[8];
 
-				bios.add(new Bio(id, name, like1, like2, like3, animal, sign, quote));
+				bios.add(new Bio(id, name, like1, like2, like3, animal, sign, quote, image));
 			}
 		} catch (Exception e) {
 			System.err.println(e);
@@ -126,11 +127,4 @@ public class BioFileDAO implements BioDAO {
 		bios.set(bios.indexOf(oldBio), bio);
 		return bios;
 	}
-	//
-	// @Override
-	// public void editBio(Bio bio) {
-	// // TODO Auto-generated method stub
-	//
-	// }
-
 }

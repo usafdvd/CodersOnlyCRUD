@@ -9,11 +9,12 @@ public class Bio {
 	private String animal;
 	private String sign;
 	private String quote;
-
+	private String image;
+	
 	public Bio() {
 	}
 
-	public Bio(String id, String name, String like1, String like2, String like3, String animal, String sign, String quote) {
+	public Bio(String id, String name, String like1, String like2, String like3, String animal, String sign, String quote, String image) {
 		this.id = id;
 		this.name = name;
 		this.like1 = like1;
@@ -22,7 +23,11 @@ public class Bio {
 		this.animal = animal;
 		this.sign = sign;
 		this.quote = quote;
+		this.image = image;
 
+	}
+	public String getImage() {
+		return image;
 	}
 	public String getId() {
 		return id;
@@ -54,6 +59,9 @@ public class Bio {
 		return quote;
 	}
 	
+	public void setImage(String image) {
+		this.image = image;
+	}
 	public void setId(String id) {
 		this.id = id;
 	}

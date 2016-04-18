@@ -2,15 +2,34 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
 <title>Welcome to the Future of Love!</title>
 </head>
 <body>
+	<div id="container">
+		<div id="header">
+			<a href="index.html">CodersOn.ly</a>
+			<div id="headerInfo">
+				<a href="getAllBios.do">View Profiles</a> | <a
+					href="createBio.jsp">Create a Profile</a>
+			</div>
+		</div>
+		<div id="body"><img id="mainImage" src="https://images.unsplash.com/reserve/Af0sF2OS5S5gatqrKzVP_Silhoutte.jpg?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1100"></div>
+		<!-- Button below for searching by name -->
+		<div id="footer">
+			<form action="GetProfileData.do" method="GET">
+				Search by Name: <input type="text" name="name" /><input
+					type="submit" value="Search" />
+				<button type="submit" formaction="getAllBios.do">See All
+					Profiles</button>
+			</form>
+		</div>
+	</div>
 
-
-<!-- Button below for searching by name -->
-<form action="GetProfileData.do" method="GET">
-Search by Name: <input type="text" name="name" /><input type="submit" value="Search"/>
-<button type="submit" formaction="getAllBios.do">See All Profiles</button></form>
 
 </body>
 </html>
+
+

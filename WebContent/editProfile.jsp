@@ -5,33 +5,21 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
 <title>Make Your Profile Better!</title>
 </head>
 <body>
-	<%-- <form action="UpdateBio.do" method="POST">
-		<input type="hidden" value="${profile.id}">
-		<input type="text" value="${profile.name}">
-		<input type="text" value="${profile.like1}">
-		<input type="text" value="${profile.like2}">
-		<input type="text" value="${profile.like3}">
-		<input type="text" value="${profile.animal}"> 
-		<select name="sign">
-			<option value="aquarius">Aquarius</option>
-			<option value="pisces">Pisces</option>
-			<option value="aries">Aries</option>
-			<option value="taurus">Taurus</option>
-			<option value="gemini">Gemini</option>
-			<option value="cancer">Cancer</option>
-			<option value="leo">Leo</option>
-			<option value="virgo">Virgo</option>
-			<option value="libra">Libra</option>
-			<option value="scorpio">Scorpio</option>
-			<option value="sagittarius">Sagittarius</option>
-			<option value="capricorn">Capricorn</option>
-		</select>
-		<input type="text" value="${profile.quote}">
-	</form> --%>
-	
+<div id="container">
+		<div id="header">
+			<a href="index.html">CodersOn.ly</a>
+			<div id="headerInfo">
+				<a href="getAllBios.do">View Profiles</a> | <a
+					href="createProfile.jsp">Create a Profile</a> | <a href="faq.jsp">FAQ</a>
+			</div>
+		</div>
+
+
+<div id="body">
 	<form:form action="UpdateBio.do" modelAttribute="profile">
 		<form:hidden path="id"/><br>
 		Name: <form:input path="name"/><br>
@@ -59,5 +47,7 @@
 		<input type="submit" name="UpdateBio.do"/>
 		
 	</form:form>
+	</div>
+	</div>
 </body>
 </html>
